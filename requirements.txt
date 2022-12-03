@@ -54,6 +54,7 @@ netifaces==0.11.0
 numpy==1.23.3
 #opencv-contrib-python==4.6.0.66
 opencv-python-headless==4.6.0.66
+opencv-contrib-python-headless==4.6.0.66
 openpyxl==3.0.9
 packaging==21.3
 pandas==1.4.4
