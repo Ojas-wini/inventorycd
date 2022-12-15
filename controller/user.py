@@ -27,11 +27,13 @@ def count_():
     t=c.fetchall()
     ti=pd.DataFrame(t,columns=["name", "count"])
     return ti
+#optional
 def csv(d):
     df = pd.DataFrame(d)
     df.index.name = 'SNo'
     df.to_csv('cold_drinks.csv')
     #st.write('Data is written successfully to csv File.') 
+#optional
 def excel(d):
     df = pd.DataFrame(d)
     df.index.name = 'SNo'
