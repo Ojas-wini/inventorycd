@@ -118,7 +118,7 @@ def main():
             im=st.file_uploader('upload_image',type=['png','jpg','jpeg'])
             if(im):
                 img =np.array(Image.open(im))
-                mod.confi=val
+                mod.conf=val
                     
 
                     # model processing
