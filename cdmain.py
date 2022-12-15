@@ -33,7 +33,7 @@ def main():
             #if not hasattr(st, 'classifier'):
             def model():
                 #st.model = torch.hub.load('ultralytics/yolov5', 'yolov5s',  _verbose=False)
-                return torch.hub.load('ultralytics/yolov5', 'custom', path='exp97//weights//best.pt',force_reload=True)
+                return torch.hub.load('ultralytics/yolov5', 'custom', path="b.pt",force_reload=True)
                 #st.model.confi=val
             mod=model()
             
