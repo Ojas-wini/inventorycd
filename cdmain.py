@@ -63,14 +63,14 @@ def main():
             q=st.radio('View Mode',ch)
             if(q=="📊data"):
                 d=usrc.read_()
-                op=['None','Excel','CSV']
+                op=['None','CSV']
                 t=st.radio('Download Mode',op)
                 df = pd.DataFrame(d)
                 if(t=="None"):
                     pass
-                if t=="Excel":
-                    st.download_button(label='download excel',data="abc.xlsx",mime='text/xlsx')
-                    st.write('Data is written successfully to Excel File.')
+                #if t=="Excel":
+                   # st.download_button(label='download excel',data="abc.xlsx",mime='text/xlsx')
+                    #st.write('Data is written successfully to Excel File.')
                 if t=="CSV":
                     st.download_button(label='download csv',data=df.to_csv(),mime='text/csv')
                     st.write('Data is written successfully to csv File.')
