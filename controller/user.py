@@ -7,11 +7,11 @@ conn = sqlite3.connect('data.db', check_same_thread=False)
 c = conn.cursor()
 def create_table():
     c.execute(
-        'CREATE TABLE IF NOT EXISTS data(time TEXT NOT NULL, name TEXT NOT NULL,count INTEGER NOT NULL)')
+        'CREATE TABLE IF NOT EXISTS data(Date TEXT NOT NULL, Name TEXT NOT NULL,Count INTEGER NOT NULL)')
 
 
 def create(time,name,count):
-    c.execute('INSERT INTO data(time, name, count) VALUES (?, ?, ?)', (time,name,count))
+    c.execute('INSERT INTO data(Date, Name, Count) VALUES (?, ?, ?)', (Date,Name,Count))
     conn.commit()
 
 
@@ -23,9 +23,9 @@ def read_():
     return data
     #return dat
 def count_():
-    c.execute('select name,sum(count) from data GROUP BY name ') 
+    c.execute('select Name,sum(Count) from data GROUP BY Name ') 
     t=c.fetchall()
-    ti=pd.DataFrame(t,columns=["name", "count"])
+    ti=pd.DataFrame(t,columns=["Name", "Count"])
     return ti
 #optional
 def csv(d):
