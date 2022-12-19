@@ -98,7 +98,7 @@ def main():
                             result = webrtc_ctx.video_processor.res()
                             
                             if result!= None:
-                                co= result.pandas().xyxy[0]['name'].value_counts()
+                                co= result.pandas().xyxy[0]['Name'].value_counts()
                                 st.sidebar.table(co)
                                 ##empty.write(c)
                                 for i in co.index:
@@ -128,7 +128,7 @@ def main():
                 bbox_img = np.array(results.render()[0])
                 st.image(bbox_img,caption="Processed Image",use_column_width=True)
 
-                C = results.pandas().xyxy[0]['name'].value_counts()
+                C = results.pandas().xyxy[0]['Name'].value_counts()
                 
                 st.sidebar.table(C)
                 if(st.checkbox("Store")):
@@ -139,9 +139,9 @@ def main():
         if q=="📊data":
                 st.subheader("📊data")
                 with st.form("f1",clear_on_submit=True):
-                    dtime=st.date_input("time")
-                    dname=st.text_input("name")
-                    dcount=st.number_input("count",min_value=0,step=1)
+                    dtime=st.date_input("Date")
+                    dname=st.text_input("Name")
+                    dcount=st.number_input("Count",min_value=0,step=1)
                     submit=st.form_submit_button("Submit")
                 if(submit):
                     
