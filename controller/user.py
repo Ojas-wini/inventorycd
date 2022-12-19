@@ -30,13 +30,13 @@ def count_():
 #optional
 def csv(d):
     df = pd.DataFrame(d)
-    df.index.name = 'SNo'
+    df.index.Name = 'SNo'
     df.to_csv('cold_drinks.csv')
     #st.write('Data is written successfully to csv File.') 
 #optional
 def excel(d):
     df = pd.DataFrame(d)
-    df.index.name = 'SNo'
+    df.index.Name = 'SNo'
     writer = pd.ExcelWriter('cold_drinks.xlsx')
     df.to_excel(writer)
     writer.save()
